@@ -5,11 +5,8 @@ namespace Ledgerline.Component.Tests.Fixtures;
 
 public class ApiFixture : WebApplicationFactory<Program>, IAsyncLifetime
 {
-    internal HttpClient Client { get; private set; }
-    
-    public ApiFixture()
-    {
-    }
+    internal HttpClient Client { get; private set; } = null!;
+
 
     public Task InitializeAsync()
     {
@@ -20,7 +17,7 @@ public class ApiFixture : WebApplicationFactory<Program>, IAsyncLifetime
         return Task.CompletedTask;
     }
 
-    public async Task DisposeAsync()
+    public new async Task DisposeAsync()
     {
         // cleanup
         

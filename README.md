@@ -1,6 +1,6 @@
 # Ledgerline
 
-Ledgerline is a multi-tenant payments ledger API. The API exposes a set of endpoints that enables clients to transfer funds between customer accounts, retrieve account statements, and view live balances. The API is also highly secure and ensures only authorised clients can the endpoints.
+Ledgerline is a multi-tenant payments ledger API. The API exposes a set of endpoints that will enable clients to transfer funds between customer accounts, retrieve account statements, and view live balances. The API will be highly secure and ensures only authorised clients call the endpoints.
 
 Planned core features:
 1. Tenants and accounts – each tenant (a fintech client) owns customer accounts.
@@ -11,5 +11,5 @@ Planned core features:
 6. Real-time – live balance updates via SignalR.
 7. SDK – a typed .NET client package for tenants.
 
-# Testing 
+## Testing 
 Execute the command `dotnet test` at the root of the repo and all tests will run. 
