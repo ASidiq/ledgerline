@@ -20,8 +20,10 @@ public class ApiFixture : WebApplicationFactory<Program>, IAsyncLifetime
         return Task.CompletedTask;
     }
 
-    public new Task DisposeAsync()
+    public async Task DisposeAsync()
     {
-        return Task.CompletedTask;
+        // cleanup
+        
+        await base.DisposeAsync();
     }
 }
